@@ -2,9 +2,8 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
-        commit = "49f1b9a",
         config = function()
-            require'nvim-treesitter.configs'.setup {
+            require 'nvim-treesitter.configs'.setup {
                 ensure_installed = {
                     "bash",
                     "c_sharp",
@@ -22,6 +21,10 @@ return {
                     "typescript",
                     "xml",
                     "yaml",
+                },
+
+                indent = {
+                    enable = true
                 },
 
                 sync_install = false,
