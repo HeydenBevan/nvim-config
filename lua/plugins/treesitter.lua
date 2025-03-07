@@ -7,9 +7,6 @@ return {
             require'nvim-treesitter.configs'.setup {
                 ensure_installed = {
                     "bash",
-                    "c",
-                    "cmake",
-                    "cpp",
                     "c_sharp",
                     "dockerfile",
                     "elixir",
@@ -19,16 +16,12 @@ return {
                     "javascript",
                     "json",
                     "lua",
-                    "make",
                     "markdown",
                     "ruby",
-                    "rust",
                     "sql",
                     "typescript",
-                    "vala",
                     "xml",
                     "yaml",
-                    "zig",
                 },
 
                 sync_install = false,
