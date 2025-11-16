@@ -12,6 +12,10 @@ return {
             vim.keymap.set("n", "<A-2>", function() ui.nav_file(2) end)
             vim.keymap.set("n", "<A-3>", function() ui.nav_file(3) end)
             vim.keymap.set("n", "<A-4>", function() ui.nav_file(4) end)
+
+            vim.keymap.set("n", "<A-d>", function() ui.nav_next() end)
+            vim.keymap.set("n", "<A-a>", function() ui.nav_prev() end)
         end
     }
 }
+

@@ -2,7 +2,8 @@ return {
     {
         "tpope/vim-abolish",
         dependencies = {
-            { 'tpope/vim-rhubarb' },
-        },
+            { "tpope/vim-rhubarb" }
+        }
     }
 }
+
