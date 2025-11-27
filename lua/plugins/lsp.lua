@@ -54,8 +54,8 @@ return {
             cmp.setup({
                 sources = {{name="nvim_lsp"}},
                 mapping = {
-                    ["<Up>"] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select}),
-                    ["<Down>"] = cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Select}),
+                    ["<Down>"] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select}),
+                    ["<Up>"] = cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Select}),
                     ["<Tab>"] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             local entry = cmp.get_selected_entry()
