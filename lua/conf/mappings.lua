@@ -2,8 +2,8 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Move selected blocks up and down, updating the indents as they move
-vim.keymap.set("n", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("n", "K", ":m '>-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "H", "^") -- Move to start of line
 vim.keymap.set("n", "L", "$") -- Move to end of line
