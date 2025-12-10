@@ -33,6 +33,31 @@ return {
             vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, { desc = "LSP: Rename symbol" })
             vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, { desc = "LSP: View Signature" })
             vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "LSP: Format document" })
+
+            -- LSP Server Configurations
+           
+            -- JavaScript & TypeScript
+            --vim.lsp.config('ts_ls', {
+            --    single_file_support = false,
+            --    settings = {
+            --        implicitProjectConfiguration = {
+            --            checkJs = false
+            --        }
+            --    }
+            --})
+
+            local base_on_attach = vim.lsp.config.eslint.on_attach
+            vim.lsp.config('eslint', {
+                on_attach = function(client, bufnr)
+                    if not base_on_attach then return end
+
+                    base_on_attach(client, bufnr)
+                    vim.api.nvim_create_autocmd('BufWritePre', {
+                        buffer = bufnr,
+                        command = 'LspEslintFixAll'
+                    })
+                end,
+            })
         end
     },
 
