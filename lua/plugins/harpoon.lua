@@ -5,7 +5,13 @@ return {
             local mark = require("harpoon.mark")
             local ui = require("harpoon.ui")
 
-            vim.keymap.set("n", "<leader>a", mark.add_file)
+            vim.keymap.set("n", "<leader>a", function(args)
+                mark.add_file(args)
+                local bufname = vim.api.nvim_buf_get_name(0)
+                local filename = vim.fn.fnamemodify(bufname, ':t')
+
+                print("Impaled: " .. filename)
+            end)
             vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
 
             vim.keymap.set("n", "<A-1>", function() ui.nav_file(1) end)
