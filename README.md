@@ -13,7 +13,7 @@ PowerShell being an utterly disgusting experience.
 
 ## Getting Started
 
-1. Install [Neovim](https://github.com/neovim/neovim/?tab=readme-ov-file#install-from-package) (v0.11 or above)
+1. Install [Neovim](https://github.com/neovim/neovim/?tab=readme-ov-file#install-from-package) (v0.12 or above)
     - See [here](https://gist.github.com/tingspace/3d628593254950f7535b218f32996b85#installing-latest-neovim-on-ubuntu) for Ubuntu
 2. Install `Roboto Mono` font from [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 3. Install a C Compiler (For Treesitter)
