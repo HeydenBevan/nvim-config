@@ -26,4 +26,12 @@ function M.get_values(tbl)
     return values
 end
 
+function M.merge(merge_into, merge_from)
+    for _, v in pairs(merge_from) do
+        merge_into[#merge_into+1] = v
+    end
+
+    return existing
+end
+
 return M
