@@ -30,6 +30,10 @@ if os_name == "Linux" or os_name == "Darwin" then
 	vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 end
 
+-- Remove search highlight until next search
+vim.keymap.set("n", "<leader>h", vim.cmd.noh)
+
+
 vim.api.nvim_create_user_command("W", "w", {})
 vim.api.nvim_create_user_command("Q", "q", {})
 vim.api.nvim_create_user_command("Wq", "wq", {})
